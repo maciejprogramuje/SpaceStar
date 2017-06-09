@@ -1,5 +1,7 @@
 package pl.facebook.maciejprogramuje.Game;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
@@ -10,6 +12,7 @@ import pl.facebook.maciejprogramuje.Main.Main;
  */
 public class EnemiesObjs extends GameObjects {
     private double line;
+    private BooleanProperty nextPlease = new SimpleBooleanProperty();
 
     public EnemiesObjs(AnchorPane gameAnchorPane, String img, int speed) {
         super(gameAnchorPane, img, speed);
@@ -17,13 +20,20 @@ public class EnemiesObjs extends GameObjects {
 
     @Override
     public void moveConditions() {
+        checkNextEnemy();
         checkBorderCollisions(getObjBorders().getLeftBorder(), 0, En.Course.RIGHT);
         checkBorderCollisions(getObjBorders().getRightBorder(), Main.gamePaneWidth, En.Course.LEFT);
-        checkCollisions();
+        checkRocketCollisions();
         move();
     }
 
-    private void checkCollisions() {
+    private void checkNextEnemy() {
+        if(this.getObjBorders().getTopBorder() / 30 == 1 && this.getObjBorders().getLeftBorder() == 30) {
+            nextPlease.set(true);
+        }
+    }
+
+    private void checkRocketCollisions() {
         Node rocketToRemove = null;
 
         for(int i = 0; i <gameAnchorPane.getChildren().size(); i++) {
@@ -50,7 +60,7 @@ public class EnemiesObjs extends GameObjects {
         if(objectBorderVal.intValue() == borderVal) {
             setCourse(En.Course.DOWN);
             line++;
-            if(line == 30) {
+            if(line == 30 + 1) {
                 setCourse(direction);
                 line = 0;
             }
@@ -65,5 +75,9 @@ public class EnemiesObjs extends GameObjects {
         } else if (course.equals(En.Course.DOWN)) {
             objImage.setLayoutY(objImage.getLayoutY() + 1);
         }
+    }
+
+    protected BooleanProperty nextPleaseProperty() {
+        return nextPlease;
     }
 }
