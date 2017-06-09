@@ -7,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
-import pl.facebook.maciejprogramuje.Utils.Alerts;
 
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -19,25 +18,23 @@ public class MainPaneController {
     public void initialize() {
         try {
             FXMLLoader startLoader = new FXMLLoader(getClass().getResource("/fxml/startPane.fxml"));
-            FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("/fxml/gamePane.fxml"));
-
             Node startGamePaneLoaded = startLoader.load();
-            Node gamePaneLoaded = gameLoader.load();
 
             StartPaneController startPaneController = startLoader.getController();
-            GamePaneController gamePaneController = gameLoader.getController();
-
             mainBorderPane.setCenter(startGamePaneLoaded);
 
             startPaneController.yesButton.setOnAction(event -> {
+                FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("/fxml/gamePane.fxml"));
+                Node gamePaneLoaded = null;
                 try {
-                    mainBorderPane.setCenter(gamePaneLoaded);
-                } catch (Exception e) {
-                    Alerts.showAlert(e);
+                    gamePaneLoaded = gameLoader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
+                mainBorderPane.setCenter(gamePaneLoaded);
             });
         } catch (IOException e) {
-            Alerts.showAlert(e);
+            e.printStackTrace();
         }
     }
 }

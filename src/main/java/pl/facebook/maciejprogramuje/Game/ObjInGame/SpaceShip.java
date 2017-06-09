@@ -14,17 +14,17 @@ public class SpaceShip extends GameObjects {
 
         oldCourse = En.Course.NEUTRAL;
 
-        objImage.getImageView().setY(gameAnchorPane.getPrefHeight() - objImage.getHeight() - 20);
-        objImage.getImageView().setX(gameAnchorPane.getPrefWidth() / 2 - objImage.getWidth() / 2);
+        objImage.setY(gameAnchorPane.getPrefHeight() - objImage.getHeight() - 20);
+        objImage.setX(gameAnchorPane.getPrefWidth() / 2 - objImage.getWidth() / 2);
     }
 
     @Override
     public void moveConditions() {
         if(oldCourse.equals(En.Course.NEUTRAL)) {
             if (course.equals(En.Course.LEFT) && getObjBorders().getLeftBorder() > 0) {
-                objImage.getImageView().setLayoutX(objImage.getImageView().getLayoutX() - 1);
+                objImage.setLayoutX(objImage.getLayoutX() - 1);
             } else if (course.equals(En.Course.RIGHT) && getObjBorders().getRightBorder() < Main.gamePaneWidth) {
-                objImage.getImageView().setLayoutX(objImage.getImageView().getLayoutX() + 1);
+                objImage.setLayoutX(objImage.getLayoutX() + 1);
             } else {
                 this.setCourse(En.Course.NEUTRAL);
             }
@@ -36,12 +36,12 @@ public class SpaceShip extends GameObjects {
     }
 
     private void changeShipImage() {
-        if (course.equals(En.Course.LEFT) && !objImage.getImageView().getImage().equals(new Image("/img/shipL.png"))) {
-            objImage.getImageView().setImage(new Image("/img/shipL.png"));
-        } else if (course.equals(En.Course.RIGHT) && !objImage.getImageView().getImage().equals(new Image("/img/shipR.png"))) {
-            objImage.getImageView().setImage(new Image("/img/shipR.png"));
-        } else if (course.equals(En.Course.NEUTRAL) && !objImage.getImageView().getImage().equals(new Image("/img/ship.png"))) {
-            objImage.getImageView().setImage(new Image("/img/ship.png"));
+        if (course.equals(En.Course.LEFT) && !objImage.getImage().equals(new Image("/img/shipL.png"))) {
+            objImage.setImage(new Image("/img/shipL.png"));
+        } else if (course.equals(En.Course.RIGHT) && !objImage.getImage().equals(new Image("/img/shipR.png"))) {
+            objImage.setImage(new Image("/img/shipR.png"));
+        } else if (course.equals(En.Course.NEUTRAL) && !objImage.getImage().equals(new Image("/img/ship.png"))) {
+            objImage.setImage(new Image("/img/ship.png"));
         }
     }
 

@@ -15,7 +15,7 @@ public abstract class GameObjects {
     private ObjBorders objBorders;
     private ObjCollision objCollision;
     protected En.Course course;
-    private Timeline animation;
+    protected Timeline animation;
 
     public GameObjects(AnchorPane gameAnchorPane, String img, int speed) {
         this.gameAnchorPane = gameAnchorPane;
@@ -26,11 +26,11 @@ public abstract class GameObjects {
 
         setAnimationTimeline(speed);
 
-        gameAnchorPane.getChildren().add(objImage.getImageView());
+        gameAnchorPane.getChildren().add(objImage);
     }
 
     private void setAnimationTimeline(int speed) {
-        objImage.getImageView().setFocusTraversable(true);
+        objImage.setFocusTraversable(true);
 
         animation = new Timeline();
 
@@ -52,8 +52,8 @@ public abstract class GameObjects {
     public abstract void moveConditions();
 
     private void setObjBorders(ObjBorders objBorders, ObjImage objImage) {
-        objBorders.setTopBorder(objImage.getImageView().getY() + objImage.getImageView().getLayoutY());
-        objBorders.setLeftBorder(objImage.getImageView().getX() + objImage.getImageView().getLayoutX());
+        objBorders.setTopBorder(objImage.getY() + objImage.getLayoutY());
+        objBorders.setLeftBorder(objImage.getX() + objImage.getLayoutX());
         objBorders.setBottomBorder(objBorders.getTopBorder() + objImage.getHeight());
         objBorders.setRightBorder(objBorders.getLeftBorder() + objImage.getWidth());
     }

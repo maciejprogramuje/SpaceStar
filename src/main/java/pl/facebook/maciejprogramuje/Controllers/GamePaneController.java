@@ -1,21 +1,14 @@
 package pl.facebook.maciejprogramuje.Controllers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.Background;
-import pl.facebook.maciejprogramuje.Game.GameObjects;
-import pl.facebook.maciejprogramuje.Game.ObjInGame.Enemy1;
+import pl.facebook.maciejprogramuje.Game.ShowBackground;
 import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
 import pl.facebook.maciejprogramuje.Game.ObjInGame.Rocket;
 import pl.facebook.maciejprogramuje.Game.ObjInGame.SpaceShip;
 import pl.facebook.maciejprogramuje.Game.ShowEnemies;
-
-import java.util.ArrayList;
 
 
 public class GamePaneController {
@@ -42,7 +35,7 @@ public class GamePaneController {
     }
 
     private void resetGameToDefaultSettings() {
-        new Background(gameAnchorPane);
+        new ShowBackground(gameAnchorPane);
 
         spaceShip = new SpaceShip(gameAnchorPane, "ship", 5);
         spaceShip.play();
