@@ -28,8 +28,14 @@ public class EnemiesObjs extends GameObjects {
     }
 
     private void checkNextEnemy() {
-        if(this.getObjBorders().getTopBorder() / 30 == 1 && this.getObjBorders().getLeftBorder() == 30) {
+        if(this.getObjBorders().getTopBorder() == 0 && this.getObjBorders().getLeftBorder() == 50) {
             nextPlease.set(true);
+            this.objImage.setOpacity(1);
+        } else {
+            this.objImage.setOpacity(this.objImage.getOpacity() + 0.02);
+            //this.objImage.setScaleX(this.objImage.getScaleX() + 0.02);
+            //this.objImage.setScaleY(this.objImage.getScaleY() + 0.02);
+
         }
     }
 
@@ -49,7 +55,7 @@ public class EnemiesObjs extends GameObjects {
             }
         }
 
-        if(rocketToRemove != null) {
+        if(rocketToRemove != null && nextPlease.get()) {
             this.stop();
             gameAnchorPane.getChildren().remove(objImage);
         }
