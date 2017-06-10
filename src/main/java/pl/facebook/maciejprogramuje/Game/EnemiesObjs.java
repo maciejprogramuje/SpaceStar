@@ -7,9 +7,6 @@ import javafx.scene.layout.AnchorPane;
 import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
 import pl.facebook.maciejprogramuje.Main.Main;
 
-/**
- * Created by m.szymczyk on 2017-06-09.
- */
 public class EnemiesObjs extends GameObjects {
     private double line;
     private BooleanProperty nextPlease = new SimpleBooleanProperty();
@@ -31,11 +28,10 @@ public class EnemiesObjs extends GameObjects {
         if(this.getObjBorders().getTopBorder() == 0 && this.getObjBorders().getLeftBorder() == 50) {
             nextPlease.set(true);
             this.objImage.setOpacity(1);
-        } else {
-            this.objImage.setOpacity(this.objImage.getOpacity() + 0.02);
-            //this.objImage.setScaleX(this.objImage.getScaleX() + 0.02);
-            //this.objImage.setScaleY(this.objImage.getScaleY() + 0.02);
-
+        } else if (this.objImage.getOpacity() < 1) {
+            this.objImage.setOpacity(this.objImage.getOpacity() + 0.01);
+            this.objImage.setScaleX(this.objImage.getScaleX() + 0.01);
+            this.objImage.setScaleY(this.objImage.getScaleY() + 0.01);
         }
     }
 
