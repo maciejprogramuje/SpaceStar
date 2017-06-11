@@ -2,11 +2,11 @@ package pl.facebook.maciejprogramuje.Game.ObjInGame;
 
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.GameObjects;
+import pl.facebook.maciejprogramuje.Game.GameObjs;
 import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
 import pl.facebook.maciejprogramuje.Main.Main;
 
-public class SpaceShip extends GameObjects {
+public class SpaceShip extends GameObjs {
     private En.Course oldCourse;
 
     public SpaceShip(AnchorPane gameAnchorPane, String img, int speed) {

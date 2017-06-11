@@ -1,14 +1,9 @@
 package pl.facebook.maciejprogramuje.Game.ObjInGame;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
-import javafx.collections.ObservableList;
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.GameObjects;
+import pl.facebook.maciejprogramuje.Game.GameObjs;
 
-import java.util.ArrayList;
-
-public class Rocket extends GameObjects {
+public class Rocket extends GameObjs {
     public Rocket(AnchorPane gameAnchorPane, String img, int speed, SpaceShip spaceShip) {
         super(gameAnchorPane, img, speed);
 

@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import pl.facebook.maciejprogramuje.Game.NewGame;
 import pl.facebook.maciejprogramuje.Game.ShowBackground;
 import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
 import pl.facebook.maciejprogramuje.Game.ObjInGame.Rocket;
@@ -40,6 +41,7 @@ public class GamePaneController {
         spaceShip = new SpaceShip(gameAnchorPane, "ship", 5);
         spaceShip.play();
 
-        new ShowEnemies(gameAnchorPane);
+        ShowEnemies showEnemies = new ShowEnemies(gameAnchorPane, 20);
+
     }
 }

@@ -9,7 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import pl.facebook.maciejprogramuje.Game.ObjUtils.*;
 
-public abstract class GameObjects {
+public abstract class GameObjs {
     protected AnchorPane gameAnchorPane;
     protected ObjImage objImage;
     private ObjBorders objBorders;
@@ -17,7 +17,7 @@ public abstract class GameObjects {
     protected En.Course course;
     protected Timeline animation;
 
-    public GameObjects(AnchorPane gameAnchorPane, String img, int speed) {
+    public GameObjs(AnchorPane gameAnchorPane, String img, int speed) {
         this.gameAnchorPane = gameAnchorPane;
         objImage = new ObjImage(img);
         setObjBorders(new ObjBorders());

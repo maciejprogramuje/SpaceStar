@@ -7,12 +7,14 @@ import javafx.scene.layout.AnchorPane;
 import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
 import pl.facebook.maciejprogramuje.Main.Main;
 
-public class EnemiesObjs extends GameObjects {
+public class EnemiesObjs extends GameObjs {
     private double line;
     private BooleanProperty nextPlease = new SimpleBooleanProperty();
+    static Integer points, maxPoints;
 
     public EnemiesObjs(AnchorPane gameAnchorPane, String img, int speed) {
         super(gameAnchorPane, img, speed);
+        points = 0;
     }
 
     @Override
@@ -54,8 +56,13 @@ public class EnemiesObjs extends GameObjects {
         if(rocketToRemove != null && nextPlease.get()) {
             this.stop();
             gameAnchorPane.getChildren().remove(objImage);
+            gameAnchorPane.getChildren().remove(rocketToRemove);
+            points++;
+
+            if(points == maxPoints) {
+                System.out.println("koniec");
+            }
         }
-        gameAnchorPane.getChildren().remove(rocketToRemove);
     }
 
     private void checkBorderCollisions(Double objectBorderVal, Integer borderVal, En.Course direction) {
@@ -81,5 +88,9 @@ public class EnemiesObjs extends GameObjects {
 
     protected BooleanProperty nextPleaseProperty() {
         return nextPlease;
+    }
+
+    protected static void setMaxPoints(Integer maxPoints) {
+        EnemiesObjs.maxPoints = maxPoints;
     }
 }

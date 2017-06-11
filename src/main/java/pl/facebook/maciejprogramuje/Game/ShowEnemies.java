@@ -6,10 +6,9 @@ import pl.facebook.maciejprogramuje.Game.ObjInGame.Enemy1;
 import java.util.ArrayList;
 
 public class ShowEnemies {
-    int numberOfEnemies1 = 20;
     ArrayList<Enemy1> enemy1s = new ArrayList<>();
 
-    public ShowEnemies(AnchorPane gameAnchorPane) {
+    public ShowEnemies(AnchorPane gameAnchorPane, int numberOfEnemies1) {
         for(int i = 0; i < numberOfEnemies1; i++) {
             enemy1s.add(new Enemy1(gameAnchorPane, 20));
         }
@@ -24,6 +23,7 @@ public class ShowEnemies {
             });
         }
 
+        enemy1s.get(0).setMaxPoints(numberOfEnemies1);
         enemy1s.get(0).play();
     }
 }

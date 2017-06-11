@@ -5,7 +5,7 @@ import pl.facebook.maciejprogramuje.Main.Main;
 
 import java.util.Random;
 
-public class BackgroundObjs extends GameObjects {
+public class BackgroundObjs extends GameObjs {
     public BackgroundObjs(String objName, AnchorPane gameAnchorPane, int speed) {
         super(gameAnchorPane, objName, speed);
 
