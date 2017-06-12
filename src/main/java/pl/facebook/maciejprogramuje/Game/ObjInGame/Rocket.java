@@ -1,7 +1,7 @@
-package pl.facebook.maciejprogramuje.Game.ObjInGame;
+package pl.facebook.maciejprogramuje.PanesObjs.ObjInGame;
 
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.GameObjs;
+import pl.facebook.maciejprogramuje.PanesObjs.GameObjs;
 
 public class Rocket extends GameObjs {
     public Rocket(AnchorPane gameAnchorPane, String img, int speed, SpaceShip spaceShip) {

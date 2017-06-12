@@ -1,10 +1,10 @@
-package pl.facebook.maciejprogramuje.Game;
+package pl.facebook.maciejprogramuje.PanesObjs;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
+import pl.facebook.maciejprogramuje.PanesObjs.ObjUtils.En;
 import pl.facebook.maciejprogramuje.Main.Main;
 
 public class EnemiesObjs extends GameObjs {

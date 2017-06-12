@@ -1,7 +1,7 @@
-package pl.facebook.maciejprogramuje.Game.ObjInGame;
+package pl.facebook.maciejprogramuje.PanesObjs.ObjInGame;
 
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.EnemiesObjs;
+import pl.facebook.maciejprogramuje.PanesObjs.EnemiesObjs;
 
 public class Enemy1 extends EnemiesObjs {
     public Enemy1(AnchorPane gameAnchorPane, int speed) {

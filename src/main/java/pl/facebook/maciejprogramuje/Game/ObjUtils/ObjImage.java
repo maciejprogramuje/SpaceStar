@@ -1,4 +1,4 @@
-package pl.facebook.maciejprogramuje.Game.ObjUtils;
+package pl.facebook.maciejprogramuje.PanesObjs.ObjUtils;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

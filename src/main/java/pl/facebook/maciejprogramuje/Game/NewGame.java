@@ -1,4 +1,4 @@
-package pl.facebook.maciejprogramuje.Game;
+package pl.facebook.maciejprogramuje.PanesObjs;
 
 /**
  * Created by 5742ZGPC on 2017-06-10.

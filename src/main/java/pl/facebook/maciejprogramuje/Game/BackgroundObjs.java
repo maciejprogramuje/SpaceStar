@@ -1,4 +1,4 @@
-package pl.facebook.maciejprogramuje.Game;
+package pl.facebook.maciejprogramuje.PanesObjs;
 
 import javafx.scene.layout.AnchorPane;
 import pl.facebook.maciejprogramuje.Main.Main;

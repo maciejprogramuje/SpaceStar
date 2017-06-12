@@ -1,9 +1,9 @@
-package pl.facebook.maciejprogramuje.Game.ObjInGame;
+package pl.facebook.maciejprogramuje.PanesObjs.ObjInGame;
 
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.GameObjs;
-import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
+import pl.facebook.maciejprogramuje.PanesObjs.GameObjs;
+import pl.facebook.maciejprogramuje.PanesObjs.ObjUtils.En;
 import pl.facebook.maciejprogramuje.Main.Main;
 
 public class SpaceShip extends GameObjs {

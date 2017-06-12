@@ -1,7 +1,7 @@
-package pl.facebook.maciejprogramuje.Game.ObjOnBckgrnd;
+package pl.facebook.maciejprogramuje.PanesObjs.ObjOnBckgrnd;
 
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.BackgroundObjs;
+import pl.facebook.maciejprogramuje.PanesObjs.BackgroundObjs;
 
 public class Star extends BackgroundObjs {
     public Star(AnchorPane gameAnchorPane, int speed) {

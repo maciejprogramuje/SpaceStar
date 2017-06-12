@@ -1,7 +1,7 @@
-package pl.facebook.maciejprogramuje.Game;
+package pl.facebook.maciejprogramuje.PanesObjs;
 
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.ObjOnBckgrnd.*;
+import pl.facebook.maciejprogramuje.PanesObjs.ObjOnBckgrnd.*;
 
 import java.util.ArrayList;
 import java.util.Random;

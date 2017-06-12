@@ -4,12 +4,12 @@ import javafx.fxml.FXML;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import pl.facebook.maciejprogramuje.Game.NewGame;
-import pl.facebook.maciejprogramuje.Game.ShowBackground;
-import pl.facebook.maciejprogramuje.Game.ObjUtils.En;
-import pl.facebook.maciejprogramuje.Game.ObjInGame.Rocket;
-import pl.facebook.maciejprogramuje.Game.ObjInGame.SpaceShip;
-import pl.facebook.maciejprogramuje.Game.ShowEnemies;
+import pl.facebook.maciejprogramuje.PanesObjs.NewGame;
+import pl.facebook.maciejprogramuje.PanesObjs.ShowBackground;
+import pl.facebook.maciejprogramuje.PanesObjs.ObjUtils.En;
+import pl.facebook.maciejprogramuje.PanesObjs.ObjInGame.Rocket;
+import pl.facebook.maciejprogramuje.PanesObjs.ObjInGame.SpaceShip;
+import pl.facebook.maciejprogramuje.PanesObjs.ShowEnemies;
 
 
 public class GamePaneController {

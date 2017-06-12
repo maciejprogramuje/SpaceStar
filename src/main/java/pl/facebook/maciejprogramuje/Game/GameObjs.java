@@ -1,4 +1,4 @@
-package pl.facebook.maciejprogramuje.Game;
+package pl.facebook.maciejprogramuje.PanesObjs;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -7,7 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
-import pl.facebook.maciejprogramuje.Game.ObjUtils.*;
+import pl.facebook.maciejprogramuje.PanesObjs.ObjUtils.*;
 
 public abstract class GameObjs {
     protected AnchorPane gameAnchorPane;
